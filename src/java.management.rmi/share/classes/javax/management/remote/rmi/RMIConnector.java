@@ -1779,8 +1779,7 @@ public class RMIConnector implements JMXConnector, Serializable, JMXAddressable 
         else if (path.startsWith("/stub/"))
             return findRMIServerJRMP(path.substring(6,end), environment);
         else {
-            final String msg = "URL path must begin with /jndi/ or /stub/ " +
-                    "or /ior/: " + path;
+            final String msg = "URL path must begin with /jndi/ or /stub/: " + path;
             throw new MalformedURLException(msg);
         }
     }
